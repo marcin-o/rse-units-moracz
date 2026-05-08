@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rse-units-moracz"
+version = "0.1.0"
+description = "A tiny Pint-based air density demo for the Python RSE course."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Marcin Oracz" }
+]
+dependencies = [
+    "pint>=0.24"
+]
+
+[project.urls]
+Homepage = "https://github.com/marcin-o/rse-units-moracz"
+Repository = "https://github.com/marcin-o/rse-units-moracz"
+Documentation = "https://marcin-o.github.io/rse-units-moracz/"
+
+[project.optional-dependencies]
+test = ["pytest"]
+docs = ["pdoc"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
